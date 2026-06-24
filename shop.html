@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#3a4424" />
+<title>Shop — G&M Investment · wardrobes, beds, kitchen, storage</title>
+<meta name="description" content="Shop G&M Investment — wardrobes, beds, kitchen cabinets and dressers in MDF, plywood and solid hardwood. Visit our Leonora showroom. Call 684-0094." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ink:#0f1111;--bg:#ebe8e1;--surface:#ffffff;
+  --header:#3a4424;--header-2:#4a5730;
+  --olive:#7e8b46;--olive-deep:#54611f;
+  --amber:#f4cf72;--amber-d:#e7bd4e;--orange:#f0a945;--orange-d:#e2962c;
+  --link:#54611f;--link-hover:#9c5a30;--price-red:#b12704;
+  --line:#d8d2c4;--line-2:#e7e2d7;--muted:#565959;--green:#3a7d2c;--wa:#25d366;
+  --sans:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --maxw:1480px;--shadow:0 1px 2px rgba(15,17,17,.06),0 8px 22px -16px rgba(40,34,20,.45);
+  --shadow-lg:0 6px 18px -8px rgba(15,17,17,.18),0 40px 70px -42px rgba(40,30,18,.5);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body.no-scroll{overflow:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;color:inherit;background:none;border:none;cursor:pointer}
+input,select{font-family:inherit;font-size:14px;color:inherit}
+::selection{background:var(--olive);color:#fff}
+:focus-visible{outline:2px solid var(--orange);outline-offset:2px;border-radius:3px}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:400;background:var(--ink);color:#fff;padding:12px 18px}
+.skip-link:focus{left:0}
+
+/* header */
+.abar{background:var(--header);color:#fff;position:sticky;top:0;z-index:60}
+.abar__in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 14px}
+.hbox{display:flex;flex-direction:column;padding:8px;border:1px solid transparent;border-radius:3px;white-space:nowrap;font-size:.72rem;line-height:1.15}
+.hbox:hover{border-color:#fff}.hbox small{color:#cfd6bf;font-size:.7rem}.hbox b{font-size:.82rem;font-weight:700}
+.alogo{display:flex;align-items:baseline;gap:2px;font-weight:700;font-size:1.35rem;letter-spacing:-.02em;padding:6px 8px;border:1px solid transparent;border-radius:3px}
+.alogo:hover{border-color:#fff}
+.alogo .mark{width:26px;height:26px;margin-right:6px;align-self:center;color:var(--amber)}.alogo .mark svg{width:100%;height:100%}
+.alogo small{font-size:.56rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);transform:translateY(-3px)}
+.adeliver{display:flex;align-items:flex-end;gap:6px;font-size:.78rem;color:#fff;padding:6px;border:1px solid transparent;border-radius:3px}
+.adeliver:hover{border-color:#fff}
+.adeliver svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.6;margin-bottom:-2px}
+.adeliver small{display:block;color:#cfd6bf;font-size:.7rem;line-height:1.1}.adeliver b{font-weight:700;font-size:.84rem}
+.asearch{flex:1;display:flex;min-width:120px;height:42px;border-radius:6px;overflow:hidden;background:#fff;transition:box-shadow .15s}
+.asearch:focus-within{box-shadow:0 0 0 3px var(--orange)}
+.asearch__cat{border:none;background:#e6e3da;color:var(--ink);padding:0 8px;max-width:120px;font-size:.78rem;cursor:pointer;border-right:1px solid var(--line)}
+.asearch__in{flex:1;border:none;outline:none;padding:0 12px;color:var(--ink);min-width:60px}
+.asearch__btn{background:var(--amber);width:46px;display:grid;place-items:center;transition:background .2s}
+.asearch__btn:hover{background:var(--amber-d)}
+.asearch__btn svg{width:21px;height:21px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round}
+.acart{display:flex;align-items:flex-end;gap:4px;position:relative;padding:8px;border:1px solid transparent;border-radius:3px;color:#fff}
+.acart:hover{border-color:#fff}
+.acart svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.6}
+.acart__n{position:absolute;top:0;left:22px;min-width:18px;text-align:center;color:var(--orange);font-weight:700;font-size:.9rem}
+.acart b{font-weight:700;font-size:.82rem;margin-bottom:2px}
+.adept{background:var(--header-2);color:#fff;position:sticky;top:58px;z-index:55}
+.adept__in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:2px;padding:5px 10px;overflow-x:auto;scrollbar-width:none}
+.adept__in::-webkit-scrollbar{display:none}
+.adept__in a,.adept__all{font-size:.82rem;font-weight:500;color:#fff;padding:7px 10px;border:1px solid transparent;border-radius:3px;white-space:nowrap;display:inline-flex;align-items:center;gap:7px}
+.adept__in a:hover,.adept__all:hover{border-color:#fff}
+.adept__all{font-weight:700}.adept__all svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2}
+.adept .hot{color:var(--amber);font-weight:700}
+
+/* layout */
+.shell{max-width:var(--maxw);margin:0 auto;padding:14px}
+.crumbs{font-size:.8rem;color:var(--muted);padding:4px 2px 12px}
+.crumbs a{color:var(--link)}.crumbs a:hover{color:var(--link-hover);text-decoration:underline}
+.layout{display:grid;grid-template-columns:248px 1fr;gap:14px;align-items:start}
+.filters{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px;position:sticky;top:108px}
+.fgroup{padding:12px 0;border-bottom:1px solid var(--line-2)}.fgroup:last-of-type{border-bottom:none}
+.fgroup h3{font-size:.95rem;font-weight:700;margin-bottom:10px}
+.flist{list-style:none;display:flex;flex-direction:column;gap:3px}
+.flist button{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;text-align:left;font-size:.86rem;color:var(--ink);padding:5px 6px;border-radius:5px;transition:background .15s}
+.flist button:hover{background:#f3f1ea;color:var(--link-hover)}
+.flist button.on{font-weight:700;color:var(--link-hover);background:#f1efe6}
+.flist .c{color:var(--muted);font-size:.76rem;font-weight:500}
+.fclear{margin-top:12px;font-size:.82rem;color:var(--link);font-weight:600}.fclear:hover{color:var(--link-hover);text-decoration:underline}
+.fhelp{margin-top:16px;background:var(--header);color:#fff;border-radius:8px;padding:16px}
+.fhelp h4{font-size:.95rem;font-weight:700;margin-bottom:6px}
+.fhelp p{font-size:.8rem;color:#d3d8c6;margin-bottom:10px}
+.fhelp a{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--wa);color:#063;border-radius:18px;height:36px;font-weight:700;font-size:.82rem}
+.fhelp a svg{width:18px;height:18px;fill:#063}
+
+.rhead{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.rhead__count{font-size:.86rem;color:var(--muted)}.rhead__count b{color:var(--ink);font-weight:700}
+.sortbox{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted)}
+.sortbox select{border:1px solid var(--line);border-radius:7px;padding:7px 30px 7px 10px;background:#f7f5ef;font-weight:600;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23565959' stroke-width='1.6' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center}
+.ftoggle{display:none}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.pcard{background:var(--surface);border:1px solid var(--line-2);border-radius:8px;padding:14px;display:flex;flex-direction:column;transition:box-shadow .25s,border-color .25s}
+.pcard:hover{box-shadow:var(--shadow);border-color:var(--line)}
+.pcard__media{position:relative;aspect-ratio:1/1;background:#fff;border-radius:6px;overflow:hidden;cursor:pointer}
+.pcard__media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pcard:hover .pcard__media img{transform:scale(1.04)}
+.tag{position:absolute;top:8px;left:8px;font-size:.62rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 9px;border-radius:4px;color:#fff}
+.tag--deal{background:var(--price-red)}.tag--made{background:var(--olive)}
+.pcard__body{padding-top:12px;display:flex;flex-direction:column;flex:1}
+.pcard__title{font-size:.92rem;font-weight:600;line-height:1.32;color:var(--link);cursor:pointer;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.4em}
+.pcard__title:hover{color:var(--link-hover);text-decoration:underline}
+.pcard__mat{font-size:.76rem;color:var(--muted);margin-top:3px}
+.price{display:flex;align-items:flex-start;gap:8px;margin-top:9px;flex-wrap:wrap}
+.price__pct{color:var(--price-red);font-size:.95rem;font-weight:600}
+.price__now{font-weight:700;font-size:1.32rem;line-height:1}
+.price__now sup{font-size:.7rem;font-weight:600;top:-.5em;margin-right:1px}
+.price__list{font-size:.76rem;color:var(--muted);margin-top:3px;width:100%}
+.deliv{font-size:.78rem;color:var(--ink);margin-top:7px}.deliv b{font-weight:700}
+.deliv2{font-size:.76rem;color:var(--muted)}
+.stock{font-size:.82rem;color:var(--green);font-weight:600;margin-top:5px}
+.pcard__btns{margin-top:11px;display:flex;flex-direction:column;gap:7px}
+.btn-cart,.btn-buy{height:36px;border-radius:18px;font-size:.84rem;font-weight:700;transition:background .2s,transform .1s}
+.btn-cart{background:var(--amber);color:var(--ink);border:1px solid var(--amber-d)}.btn-cart:hover{background:var(--amber-d)}
+.btn-buy{background:var(--orange);color:var(--ink);border:1px solid var(--orange-d)}.btn-buy:hover{background:var(--orange-d)}
+.btn-cart:active,.btn-buy:active{transform:scale(.97)}
+.btn-wa-pc{height:36px;border-radius:18px;background:var(--wa);color:#fff;font-weight:700;font-size:.84rem;display:flex;align-items:center;justify-content:center;gap:7px;transition:background .2s}
+.btn-wa-pc:hover{background:#1fb858}.btn-wa-pc svg{width:16px;height:16px;fill:#fff}
+.empty{grid-column:1/-1;background:var(--surface);border:1px solid var(--line);border-radius:8px;text-align:center;padding:60px 20px;color:var(--muted)}
+.empty h3{font-size:1.3rem;color:var(--ink);margin-bottom:8px}
+.empty button{margin-top:16px;background:var(--amber);border:1px solid var(--amber-d);border-radius:20px;padding:10px 24px;font-weight:700}
+
+/* help band */
+.helpband{max-width:var(--maxw);margin:18px auto 0;padding:0 14px}
+.helpband__in{background:var(--surface);border-radius:10px;box-shadow:var(--shadow);padding:26px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.helpband h2{font-size:1.3rem;font-weight:700}.helpband p{color:var(--muted);font-size:.9rem;margin-top:4px}
+.helpband .btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;height:46px;padding:0 24px;border-radius:23px;font-weight:700;font-size:.9rem;transition:background .2s}
+.btn--dark{background:var(--ink);color:#fff}.btn--dark:hover{background:var(--olive-deep)}
+.btn--wa{background:var(--wa);color:#063}.btn--wa:hover{background:#1fb858}
+.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.btn--wa svg{fill:#063;stroke:none}
+
+/* cart drawer */
+.overlay{position:fixed;inset:0;z-index:120;background:rgba(15,17,17,.5);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.overlay.show{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:130;width:min(420px,94vw);background:var(--bg);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .45s cubic-bezier(.22,.61,.36,1);box-shadow:-30px 0 60px -30px rgba(15,17,17,.5)}
+.drawer.open{transform:translateX(0)}
+.drawer__head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:var(--surface);border-bottom:1px solid var(--line)}
+.drawer__head h3{font-size:1.15rem;font-weight:700}.drawer__head span{color:var(--muted);font-size:.82rem}
+.drawer__close{width:36px;height:36px;border-radius:50%;display:grid;place-items:center}.drawer__close:hover{background:#f0eee7}
+.drawer__close svg{width:20px;height:20px;stroke:var(--ink);stroke-width:1.8;fill:none;stroke-linecap:round}
+.drawer__items{flex:1;overflow-y:auto;padding:6px 16px}
+.cline{display:grid;grid-template-columns:62px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line-2)}
+.cline__img{width:62px;height:62px;border-radius:6px;overflow:hidden;background:#fff;border:1px solid var(--line-2)}
+.cline__img img{width:100%;height:100%;object-fit:cover}
+.cline__name{font-size:.86rem;font-weight:500;color:var(--link);line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cline__price{font-weight:700;font-size:.9rem;text-align:right;white-space:nowrap}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:18px;margin-top:8px;background:#fff}
+.qty button{width:30px;height:30px;display:grid;place-items:center;font-size:1.05rem;color:var(--link)}.qty button:hover{background:#f3f1ea}
+.qty span{min-width:26px;text-align:center;font-size:.85rem;font-weight:700}
+.cline__rm{font-size:.74rem;color:var(--link);margin-top:7px;text-decoration:underline}.cline__rm:hover{color:var(--link-hover)}
+.cart-empty{text-align:center;padding:50px 18px;color:var(--muted)}
+.cart-empty svg{width:44px;height:44px;stroke:#bdb6a4;fill:none;stroke-width:1.4;margin:0 auto 14px}
+.cart-empty p{font-size:1.1rem;color:var(--ink);font-weight:700;margin-bottom:4px}
+.drawer__foot{padding:16px 18px calc(16px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--line)}
+.drawer__row{display:flex;justify-content:space-between;align-items:baseline;font-size:.86rem;color:var(--muted);margin-bottom:4px}
+.drawer__row.total{font-size:1.05rem;color:var(--ink);margin:8px 0}.drawer__row.total b{font-weight:700}
+.drawer__note{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.btn-checkout{width:100%;height:46px;border-radius:23px;background:var(--amber);border:1px solid var(--amber-d);font-weight:700;font-size:.92rem}.btn-checkout:hover{background:var(--amber-d)}
+.btn-wa-cart{width:100%;height:44px;border-radius:22px;background:var(--wa);color:#fff;font-weight:700;margin-top:9px;display:flex;align-items:center;justify-content:center;gap:9px}
+.btn-wa-cart:hover{background:#1fb858}.btn-wa-cart svg{width:18px;height:18px;fill:#fff}
+.btn-continue{width:100%;text-align:center;margin-top:9px;font-size:.8rem;color:var(--link);text-decoration:underline}
+
+/* quick view */
+.modal{position:fixed;inset:0;z-index:140;display:grid;place-items:center;padding:18px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.modal.open{opacity:1;visibility:visible}
+.modal__bd{position:absolute;inset:0;background:rgba(15,17,17,.55)}
+.modal__panel{position:relative;z-index:1;background:#fff;border-radius:12px;overflow:hidden;width:min(860px,100%);max-height:90vh;display:grid;grid-template-columns:1fr 1fr;box-shadow:var(--shadow-lg);transform:scale(.97);transition:transform .35s}
+.modal.open .modal__panel{transform:scale(1)}
+.modal__media{background:#fff;min-height:320px;position:relative;border-right:1px solid var(--line-2)}
+.modal__media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.modal__info{padding:26px;overflow-y:auto;display:flex;flex-direction:column}
+.modal__info h2{font-size:1.5rem;font-weight:700;line-height:1.15}
+.modal__cat{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.modal__price{font-size:1.7rem;font-weight:700;margin:12px 0 6px}.modal__price sup{font-size:.8rem;top:-.6em}
+.modal__desc{color:var(--muted);font-size:.92rem;line-height:1.6;margin:8px 0}
+.modal__spec{margin:10px 0;border-top:1px solid var(--line-2)}
+.modal__spec div{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px solid var(--line-2);font-size:.84rem}
+.modal__spec span:first-child{color:var(--muted)}
+.modal__buy{margin-top:auto;padding-top:14px;display:flex;gap:10px;align-items:center}.modal__buy .btn-cart{flex:1;height:44px;border-radius:22px}
+.modal__close{position:absolute;top:12px;right:12px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.94);display:grid;place-items:center;box-shadow:var(--shadow)}
+.modal__close svg{width:20px;height:20px;stroke:var(--ink);stroke-width:1.8;fill:none;stroke-linecap:round}
+
+/* whatsapp FAB */
+.wa-fab{position:fixed;right:18px;bottom:18px;z-index:150;display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#fff;padding:13px 18px 13px 14px;border-radius:30px;font-weight:700;font-size:.9rem;box-shadow:0 10px 26px -8px rgba(0,0,0,.4)}
+.wa-fab:hover{background:#1fb858}.wa-fab svg{width:26px;height:26px;fill:#fff}.wa-fab .t{white-space:nowrap}
+
+/* toasts */
+.toasts{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);z-index:200;display:flex;flex-direction:column;gap:10px;align-items:center;pointer-events:none;width:max-content;max-width:92vw}
+.toast{background:var(--ink);color:#fff;border-radius:8px;padding:13px 20px;font-size:.86rem;font-weight:600;display:flex;align-items:center;gap:11px;box-shadow:var(--shadow-lg);transform:translateY(18px);opacity:0;transition:transform .35s,opacity .35s}
+.toast.show{transform:translateY(0);opacity:1}
+.toast svg{width:18px;height:18px;stroke:var(--olive);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+
+/* footer */
+.backtop{background:var(--header-2);color:#fff;text-align:center;padding:14px;font-size:.82rem;font-weight:600;cursor:pointer;margin-top:18px}
+.backtop:hover{background:#56652f}
+.footer{background:var(--header);color:#fff}
+.footer__cols{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:40px 20px}
+.footer__cols h4{font-size:.95rem;font-weight:700;margin-bottom:12px}
+.footer__cols a,.footer__cols p{display:block;font-size:.82rem;color:#d3d8c6;margin-bottom:8px}
+.footer__cols a:hover{text-decoration:underline;color:#fff}
+.footer__bar{border-top:1px solid rgba(255,255,255,.16);text-align:center;padding:22px;font-size:.78rem;color:#cfd6bf}
+.footer__bar .gm{font-weight:700;color:#fff;font-size:1.05rem}
+
+@media (max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr}
+  .filters{position:fixed;top:0;left:0;bottom:0;z-index:130;width:min(320px,88vw);border-radius:0;overflow-y:auto;transform:translateX(-100%);transition:transform .4s cubic-bezier(.22,.61,.36,1)}
+  .filters.open{transform:translateX(0)}
+  .ftoggle{display:inline-flex;align-items:center;gap:7px;background:#f7f5ef;border:1px solid var(--line);border-radius:7px;padding:7px 14px;font-weight:700;font-size:.84rem}
+  .ftoggle svg{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:2}
+  .hbox,.adeliver{display:none}
+}
+@media (max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.abar__in{flex-wrap:wrap}.asearch{order:5;flex-basis:100%}.footer__cols{grid-template-columns:1fr 1fr;gap:24px}.wa-fab .t{display:none}.wa-fab{padding:14px;border-radius:50%}}
+@media (max-width:560px){.pcard__btns{flex-direction:column}.modal__panel{grid-template-columns:1fr;max-height:92vh}.modal__media{min-height:220px;border-right:none;border-bottom:1px solid var(--line-2)}}
+@media (max-width:420px){.grid{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<a href="#results" class="skip-link">Skip to results</a>
+
+<!-- HEADER -->
+<header>
+  <div class="abar">
+    <div class="abar__in">
+      <a href="index.html" class="alogo"><span class="mark" aria-hidden="true"><svg viewBox="0 0 32 32"><g transform="rotate(45 16 16)"><rect x="7" y="7" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2.2"/><rect x="11.5" y="11.5" width="9" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/></g></svg></span>G&amp;M<small>Investment</small></a>
+      <a class="adeliver" href="https://www.google.com/maps/search/?api=1&query=Leonora%2C%20West%20Coast%20Demerara%2C%20Guyana" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg><span><small>Visit us in</small><b>Leonora</b></span></a>
+      <form class="asearch" id="searchForm" role="search">
+        <select class="asearch__cat" id="searchCat" aria-label="Search in category"></select>
+        <input class="asearch__in" id="searchInput" type="search" placeholder="Search G&amp;M Investment" aria-label="Search">
+        <button class="asearch__btn" type="submit" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg></button>
+      </form>
+      <a class="hbox" href="tel:+5926840094"><small>Call us</small><b>684-0094</b></a>
+      <a class="hbox" href="https://wa.me/5926840094?text=Hi%20G%26M%20Investment%2C%20I%27d%20like%20to%20ask%20about%20a%20piece." target="_blank" rel="noopener"><small>Chat on</small><b>WhatsApp</b></a>
+      <button class="acart" id="cartToggle" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M6 7h13l-1.2 9.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="acart__n" data-cart-count>0</span><b>Cart</b></button>
+    </div>
+  </div>
+  <nav class="adept" aria-label="Departments">
+    <div class="adept__in" id="deptBar">
+      <button class="adept__all" id="deptAll"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>All</button>
+      <a href="shop.html" class="hot" data-dept="All">Today’s Deals</a>
+      <a data-dept="Wardrobes">Wardrobes</a>
+      <a data-dept="Beds">Beds</a>
+      <a data-dept="Kitchen">Kitchen</a>
+      <a data-dept="Storage">Storage &amp; Dressers</a>
+      <a href="index.html#materials">Our materials</a>
+      <a href="index.html#visit">Visit &amp; contact</a>
+    </div>
+  </nav>
+</header>
+
+<div class="shell">
+  <div class="crumbs"><a href="index.html">Home</a> › <span id="crumbCat">All Departments</span></div>
+  <div class="layout">
+    <aside class="filters" id="filters" aria-label="Filters">
+      <div class="fgroup"><h3>Department</h3><ul class="flist" id="deptList"></ul></div>
+      <div class="fgroup"><h3>Material</h3><ul class="flist" id="matList"></ul></div>
+      <div class="fgroup"><h3>Price</h3><ul class="flist" id="priceList"></ul></div>
+      <div class="fgroup"><h3>Availability</h3><ul class="flist" id="availList"></ul></div>
+      <button class="fclear" id="clearAll">Clear all filters</button>
+      <div class="fhelp"><h4>Need a custom size?</h4><p>Tell us your room and we’ll build to fit.</p>
+        <a href="https://wa.me/5926840094?text=Hi%20G%26M%20Investment%2C%20I%27d%20like%20a%20custom%20size." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.2.6 1 1.3 1.6.9.8 1.6 1 1.8 1.1.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.7.9c.2.1.4.2.4.3.1.1.1.6-.1 1Z"/></svg> WhatsApp 684-0094</a></div>
+    </aside>
+
+    <main id="results">
+      <div class="rhead">
+        <span class="rhead__count"><b id="resultCount">0</b> results <span id="resultFor"></span></span>
+        <button class="ftoggle" id="ftoggle"><svg viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg> Filters</button>
+        <div class="sortbox" style="margin-left:auto"><label for="sortSelect">Sort by:</label>
+          <select id="sortSelect"><option value="featured">Featured</option><option value="price-asc">Price: Low to High</option><option value="price-desc">Price: High to Low</option><option value="name">Name: A–Z</option></select>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </main>
+  </div>
+</div>
+
+<!-- help band -->
+<section class="helpband">
+  <div class="helpband__in">
+    <div><h2>Not sure which fits your room?</h2><p>Call or WhatsApp us on <b>684-0094</b> — we’ll help you choose and measure up. Visit our Leonora showroom.</p></div>
+    <div class="btns">
+      <a href="tel:+5926840094" class="btn btn--dark"><svg viewBox="0 0 24 24"><path d="M6 3h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg> Call 684-0094</a>
+      <a href="https://wa.me/5926840094?text=Hi%20G%26M%20Investment%2C%20I%27d%20like%20help%20choosing." target="_blank" rel="noopener" class="btn btn--wa"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.2.6 1 1.3 1.6.9.8 1.6 1 1.8 1.1.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.7.9c.2.1.4.2.4.3.1.1.1.6-.1 1Z"/></svg> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div class="backtop" id="backtop">Back to top</div>
+<footer class="footer">
+  <div class="footer__cols">
+    <div><h4>Shop</h4><a href="shop.html?cat=Wardrobes">Wardrobes</a><a href="shop.html?cat=Beds">Beds</a><a href="shop.html?cat=Kitchen">Kitchen cabinets</a><a href="shop.html?cat=Storage">Storage &amp; dressers</a><a href="shop.html">All products</a></div>
+    <div><h4>Learn</h4><a href="index.html#materials">Our materials</a><a href="index.html#deals">Today’s deals</a><a href="index.html#visit">Visit the showroom</a></div>
+    <div><h4>Help</h4><a href="tel:+5926840094">Call 684-0094</a><a href="https://wa.me/5926840094" target="_blank" rel="noopener">WhatsApp us</a><a href="index.html#visit">Visit &amp; pickup</a></div>
+    <div><h4>Visit</h4><p>187 Parafield, Leonora<br>West Coast Demerara</p><a href="tel:+5926840094">684-0094</a><p>By appointment · Mon–Sat</p></div>
+  </div>
+  <div class="footer__bar"><span class="gm">G&amp;M Investment</span> · © 2026 — Furniture built to last · 187 Parafield, Leonora · 684-0094</div>
+</footer>
+
+<!-- cart -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+  <div class="drawer__head"><div><h3>Cart</h3><span id="cartCountText">0 items</span></div><button class="drawer__close" id="cartClose" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="drawer__items" id="cartItems"></div>
+  <div class="drawer__foot" id="cartFoot" hidden>
+    <div class="drawer__row total"><span>Total to pay</span><b id="cartSubtotal">G$ 0</b></div>
+    <p class="drawer__note">Send your list to us on WhatsApp and we’ll confirm your quotation. No online payment — pay when you collect.</p>
+    <a class="btn-wa-cart" id="waOrder" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.2.6 1 1.3 1.6.9.8 1.6 1 1.8 1.1.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.7.9c.2.1.4.2.4.3.1.1.1.6-.1 1Z"/></svg> Send quotation on WhatsApp</a>
+    <button class="btn-continue" id="continueShop">Continue shopping</button>
+  </div>
+</aside>
+
+<!-- quick view -->
+<div class="modal" id="quickModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal__bd" id="modalBd"></div>
+  <div class="modal__panel">
+    <button class="modal__close" id="modalClose" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="modal__media" id="qvMedia"></div>
+    <div class="modal__info" id="qvInfo"></div>
+  </div>
+</div>
+
+<!-- WhatsApp FAB -->
+<a class="wa-fab" href="https://wa.me/5926840094?text=Hi%20G%26M%20Investment%2C%20I%27d%20like%20to%20ask%20about%20a%20piece." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.2.6 1 1.3 1.6.9.8 1.6 1 1.8 1.1.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.7.9c.2.1.4.2.4.3.1.1.1.6-.1 1Z"/></svg>
+  <span class="t">WhatsApp us</span>
+</a>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+  var WA='https://wa.me/5926840094';
+  var PRODUCTS=[
+    {id:'solace',name:'Solace 3-Door Wardrobe — ebonised finish',cat:'Wardrobes',price:165000,list:198000,units:6,img:'assets/wardrobe.jpg',mat:'MDF · Plywood · Hard Wood',materials:['MDF','Plywood','Hard Wood'],dim:'2100 × 1800 × 600 mm',featured:true,blurb:'A tall three-door wardrobe with a soft-lit interior, hanging rail and four drawers — built in MDF and plywood on a solid hardwood base.'},
+    {id:'lunaria',name:'Lunaria Mirrored Wardrobe — soft-grey',cat:'Wardrobes',price:235000,list:275000,units:4,img:'assets/armoire.jpg',mat:'Plywood · MDF · mirror',materials:['Plywood','MDF'],dim:'2000 × 1700 × 580 mm',featured:true,blurb:'Mirror-fronted doors and six lit drawers in a soft-grey finish — a wardrobe and dresser in one.'},
+    {id:'verena',name:'Verena Upholstered Bed (Queen)',cat:'Beds',price:245000,list:295000,units:5,img:'assets/bed.jpg',mat:'Leather & suede · hardwood frame',materials:['Leather','Suede','Hard Wood'],dim:'Queen · 1600 × 2000 mm',featured:true,blurb:'A deep-buttoned headboard in leather and suede over a solid hardwood frame, with a soft under-bed glow.'},
+    {id:'halcyon',name:'Halcyon Kitchen Cabinets — built to order',cat:'Kitchen',price:360000,units:0,made:true,img:'assets/kitchen.jpg',mat:'MDF · Plywood',materials:['MDF','Plywood'],dim:'Built to your room',featured:true,blurb:'Full kitchen cabinetry in a rich finish with an under-lit counter — measured and built to your room in MDF and plywood.'},
+    {id:'cordova',name:'Cordova Kitchen Range — built to order',cat:'Kitchen',price:410000,units:0,made:true,img:'assets/kitchen2.jpg',mat:'MDF · Plywood',materials:['MDF','Plywood'],dim:'Built to your room',blurb:'Wall and base cabinets with a tall larder unit and brushed handles — a complete kitchen range built to fit.'},
+    {id:'aurora',name:'Aurora Storage Cabinet Set — black & white',cat:'Storage',price:145000,list:175000,units:8,img:'assets/cabinets.jpg',mat:'MDF · Plywood',materials:['MDF','Plywood'],dim:'Modular · 4 units',blurb:'A modular run of open shelves, cupboards and drawers in a crisp black-and-white finish — mix and match to fit.'},
+    {id:'meridian',name:'Meridian Nightstand — walnut, 2 drawers',cat:'Storage',price:58000,list:72000,units:12,img:'assets/sideboard.jpg',mat:'Hard Wood · Plywood',materials:['Hard Wood','Plywood'],dim:'560 × 600 × 450 mm',blurb:'A warm walnut nightstand with two soft-close drawers on tapered legs.'},
+    {id:'aldon',name:'Aldon Bedside Table — walnut',cat:'Storage',price:52000,units:10,img:'assets/nightstand2.jpg',mat:'Hard Wood · Plywood',materials:['Hard Wood','Plywood'],dim:'520 × 580 × 440 mm',blurb:'A compact bedside table in solid-look walnut — drawer storage with a lamp-ready top.'}
+  ];
+  var CATS=['Wardrobes','Beds','Kitchen','Storage'];
+  var CAT_LABEL={Wardrobes:'Wardrobes',Beds:'Beds',Kitchen:'Kitchen',Storage:'Storage & Dressers'};
+  var MATERIALS=[
+    {key:'MDF',label:'MDF',test:function(p){return p.materials.indexOf('MDF')>=0;}},
+    {key:'Plywood',label:'Plywood',test:function(p){return p.materials.indexOf('Plywood')>=0;}},
+    {key:'Hard Wood',label:'Hard Wood',test:function(p){return p.materials.indexOf('Hard Wood')>=0;}},
+    {key:'LeatherSuede',label:'Leather & Suede',test:function(p){return p.materials.indexOf('Leather')>=0||p.materials.indexOf('Suede')>=0;}}
+  ];
+  var PRICE_RANGES=[
+    {key:'p1',label:'Under G$ 100,000',test:function(p){return p.price<100000;}},
+    {key:'p2',label:'G$ 100,000 to 200,000',test:function(p){return p.price>=100000&&p.price<200000;}},
+    {key:'p3',label:'G$ 200,000 to 400,000',test:function(p){return p.price>=200000&&p.price<400000;}},
+    {key:'p4',label:'Over G$ 400,000',test:function(p){return p.price>=400000;}}
+  ];
+
+  var state={cat:'All',q:'',sort:'featured',mat:'',price:'',avail:''};
+  var cart=load();var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function $(s,c){return (c||document).querySelector(s);}
+  function $all(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));}
+  function money(n){return Math.round(n).toLocaleString('en-US');}
+  function byId(id){return PRODUCTS.filter(function(p){return p.id===id;})[0];}
+  function pct(p){return p.list?Math.round((1-p.price/p.list)*100):0;}
+  function waProduct(p){return WA+'?text='+encodeURIComponent('Hi G&M Investment, I\'m interested in this piece:\n\n'+p.name+'\n'+p.mat+'\nPrice: G$ '+money(p.price));}
+
+  function tag(p){ if(pct(p)>=15)return '<span class="tag tag--deal">Deal · -'+pct(p)+'%</span>'; if(p.made)return '<span class="tag tag--made">Built to order</span>'; return ''; }
+  function card(p){
+    return '<article class="pcard">'+
+      '<div class="pcard__media" data-quick="'+p.id+'">'+tag(p)+'<img src="'+p.img+'" alt="" loading="lazy"></div>'+
+      '<div class="pcard__body">'+
+        '<a class="pcard__title" data-quick="'+p.id+'">'+p.name+'</a>'+
+        '<div class="pcard__mat">'+p.mat+'</div>'+
+        '<div class="price">'+(pct(p)?'<span class="price__pct">-'+pct(p)+'%</span>':'')+'<span class="price__now"><sup>G$</sup>'+money(p.price)+'</span>'+
+          (p.list?'<span class="price__list">List: <s>G$ '+money(p.list)+'</s></span>':'')+'</div>'+
+        (p.made?'<div class="stock" style="color:var(--olive-deep)">Built to order</div>':(p.units<=6?'<div class="stock" style="color:var(--price-red)">Only '+p.units+' left</div>':'<div class="stock">In stock</div>'))+
+        '<div class="pcard__btns"><button class="btn-cart" data-add="'+p.id+'">Add to Cart</button>'+
+          '<a class="btn-wa-pc" href="'+waProduct(p)+'" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.2.6 1 1.3 1.6.9.8 1.6 1 1.8 1.1.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.7.9c.2.1.4.2.4.3.1.1.1.6-.1 1Z"/></svg> WhatsApp</a></div>'+
+      '</div></article>';
+  }
+  function filtered(){
+    var q=state.q.trim().toLowerCase();
+    var mt=MATERIALS.filter(function(x){return x.key===state.mat;})[0];
+    var pr=PRICE_RANGES.filter(function(x){return x.key===state.price;})[0];
+    var list=PRODUCTS.filter(function(p){
+      if(state.cat!=='All'&&p.cat!==state.cat)return false;
+      if(q&&(p.name+' '+p.cat+' '+p.mat+' '+p.blurb).toLowerCase().indexOf(q)<0)return false;
+      if(mt&&!mt.test(p))return false;
+      if(pr&&!pr.test(p))return false;
+      if(state.avail==='stock'&&(p.made||p.units<=0))return false;
+      if(state.avail==='made'&&!p.made)return false;
+      return true;
+    });
+    var s=state.sort;
+    list.sort(function(a,b){
+      if(s==='price-asc')return a.price-b.price;
+      if(s==='price-desc')return b.price-a.price;
+      if(s==='name')return a.name.localeCompare(b.name);
+      return (b.featured?1:0)-(a.featured?1:0);
+    });
+    return list;
+  }
+  function renderGrid(){
+    var list=filtered();
+    $('#resultCount').textContent=list.length;
+    $('#resultFor').textContent=state.q?('for "'+state.q+'"'):(state.cat!=='All'?'in '+CAT_LABEL[state.cat]:'');
+    $('#crumbCat').textContent=state.cat==='All'?'All Departments':CAT_LABEL[state.cat];
+    var g=$('#grid');
+    if(!list.length){g.innerHTML='<div class="empty"><h3>No results</h3><p>Try fewer filters or a different search.</p><button id="clr2">Clear filters</button></div>';$('#clr2').addEventListener('click',clearAll);return;}
+    g.innerHTML=list.map(card).join('');
+  }
+  function renderFilters(){
+    $('#deptList').innerHTML=['All'].concat(CATS).map(function(c){
+      var n=c==='All'?PRODUCTS.length:PRODUCTS.filter(function(p){return p.cat===c;}).length;
+      var lbl=c==='All'?'All Departments':CAT_LABEL[c];
+      return '<li><button data-dept="'+c+'" class="'+(state.cat===c?'on':'')+'"><span>'+lbl+'</span><span class="c">'+n+'</span></button></li>';}).join('');
+    $('#matList').innerHTML=MATERIALS.map(function(m){
+      var n=PRODUCTS.filter(m.test).length;
+      return '<li><button data-mat="'+m.key+'" class="'+(state.mat===m.key?'on':'')+'"><span>'+m.label+'</span><span class="c">'+n+'</span></button></li>';}).join('');
+    $('#priceList').innerHTML=PRICE_RANGES.map(function(pr){return '<li><button data-price="'+pr.key+'" class="'+(state.price===pr.key?'on':'')+'">'+pr.label+'</button></li>';}).join('');
+    $('#availList').innerHTML=[{k:'',l:'All items'},{k:'stock',l:'In stock now'},{k:'made',l:'Built to order'}].map(function(a){return '<li><button data-avail="'+a.k+'" class="'+(state.avail===a.k?'on':'')+'">'+a.l+'</button></li>';}).join('');
+  }
+  function renderSearchCat(){$('#searchCat').innerHTML='<option value="All">All</option>'+CATS.map(function(c){return '<option value="'+c+'">'+CAT_LABEL[c]+'</option>';}).join('');}
+  function setCat(c){state.cat=c;if($('#searchCat'))$('#searchCat').value=(c==='All'?'All':c);renderFilters();renderGrid();closeFilters();}
+  function clearAll(){state.cat='All';state.q='';state.mat='';state.price='';state.avail='';$('#searchInput').value='';renderFilters();renderGrid();}
+
+  /* cart */
+  function load(){try{return JSON.parse(localStorage.getItem('gm_cart')||'[]');}catch(e){return[];}}
+  function save(){try{localStorage.setItem('gm_cart',JSON.stringify(cart));}catch(e){}}
+  function count(){return cart.reduce(function(n,l){return n+l.qty;},0);}
+  function subtotal(){return cart.reduce(function(n,l){var p=byId(l.id);return n+(p?p.price*l.qty:0);},0);}
+  function lineFor(id){return cart.filter(function(l){return l.id===id;})[0];}
+  function add(id,qty){qty=qty||1;var l=lineFor(id);if(l)l.qty+=qty;else cart.push({id:id,qty:qty});save();updateCart();}
+  function setQty(id,q){var l=lineFor(id);if(!l)return;l.qty=q;if(l.qty<=0)cart=cart.filter(function(x){return x.id!==id;});save();updateCart();renderCart();}
+  function remove(id){cart=cart.filter(function(l){return l.id!==id;});save();updateCart();renderCart();}
+  function updateCart(){var n=count();$all('[data-cart-count]').forEach(function(b){b.textContent=n;});$('#cartCountText').textContent=n+(n===1?' item':' items');$('#cartFoot').hidden=n===0;$('#cartSubtotal').textContent='G$ '+money(subtotal());updateWaOrder();}
+  function updateWaOrder(){
+    if(!cart.length){return;}
+    var lines=cart.map(function(l){var p=byId(l.id);if(!p)return'';
+      return l.qty+'× '+p.name+'\n   '+p.mat+'\n   G$ '+money(p.price*l.qty);}).filter(Boolean);
+    var msg='Hi G&M Investment, please send me a quotation for:\n\n'+lines.join('\n\n')+'\n\nTotal to pay: G$ '+money(subtotal());
+    $('#waOrder').href=WA+'?text='+encodeURIComponent(msg);
+  }
+  function renderCart(){
+    var box=$('#cartItems');
+    if(!cart.length){box.innerHTML='<div class="cart-empty"><svg viewBox="0 0 24 24"><path d="M6 7h13l-1.2 9.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><p>Your cart is empty</p><span>Pieces you add will rest here.</span></div>';return;}
+    box.innerHTML=cart.map(function(l){var p=byId(l.id);if(!p)return'';
+      return '<div class="cline"><div class="cline__img"><img src="'+p.img+'" alt=""></div>'+
+        '<div><div class="cline__name">'+p.name+'</div><div class="qty"><button data-dec="'+p.id+'" aria-label="Decrease">−</button><span>'+l.qty+'</span><button data-inc="'+p.id+'" aria-label="Increase">+</button></div></div>'+
+        '<div style="text-align:right"><div class="cline__price">G$ '+money(p.price*l.qty)+'</div><button class="cline__rm" data-remove="'+p.id+'">Delete</button></div></div>';}).join('');
+  }
+  function openCart(){renderCart();updateWaOrder();$('#overlay').classList.add('show');$('#cartDrawer').classList.add('open');$('#cartDrawer').setAttribute('aria-hidden','false');document.body.classList.add('no-scroll');}
+  function closeCart(){$('#overlay').classList.remove('show');$('#cartDrawer').classList.remove('open');$('#cartDrawer').setAttribute('aria-hidden','true');if(!modalOpen())document.body.classList.remove('no-scroll');}
+
+  /* quick view */
+  function modalOpen(){return $('#quickModal').classList.contains('open');}
+  function openQuick(id){
+    var p=byId(id);if(!p)return;
+    $('#qvMedia').innerHTML='<img src="'+p.img+'" alt="">';
+    $('#qvInfo').innerHTML='<div class="modal__cat">'+CAT_LABEL[p.cat]+(p.made?' · Built to order':'')+'</div><h2>'+p.name+'</h2>'+
+      '<div class="modal__price">'+(pct(p)?'<span class="price__pct" style="font-size:1rem;margin-right:6px">-'+pct(p)+'%</span>':'')+'<sup>G$</sup>'+money(p.price)+'</div>'+
+      (p.list?'<div class="price__list">List: <s>G$ '+money(p.list)+'</s></div>':'')+
+      '<p class="modal__desc" style="margin-top:10px">'+p.blurb+'</p>'+
+      '<div class="modal__spec"><div><span>Materials</span><span>'+p.mat+'</span></div><div><span>Availability</span><span>'+(p.made?'Built to order · 3–4 weeks':'In stock')+'</span></div></div>'+
+      '<div class="modal__buy"><div class="qty"><button id="qvDec">−</button><span id="qvQty">1</span><button id="qvInc">+</button></div><button class="btn-cart" id="qvAdd">Add to Cart</button>'+
+      '<a class="btn-wa-pc" style="flex:0 0 auto;height:44px;padding:0 16px" href="'+waProduct(p)+'" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.2.6 1 1.3 1.6.9.8 1.6 1 1.8 1.1.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.7.9c.2.1.4.2.4.3.1.1.1.6-.1 1Z"/></svg></a></div>';
+    var qty=1,q=$('#qvQty');
+    $('#qvDec').addEventListener('click',function(){qty=Math.max(1,qty-1);q.textContent=qty;});
+    $('#qvInc').addEventListener('click',function(){qty=Math.min(20,qty+1);q.textContent=qty;});
+    $('#qvAdd').addEventListener('click',function(){add(p.id,qty);toast('Added to cart');closeQuick();openCart();});
+    var m=$('#quickModal');m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.classList.add('no-scroll');
+  }
+  function closeQuick(){var m=$('#quickModal');m.classList.remove('open');m.setAttribute('aria-hidden','true');if(!$('#cartDrawer').classList.contains('open'))document.body.classList.remove('no-scroll');}
+
+  function toast(msg){var box=$('#toasts');var t=document.createElement('div');t.className='toast';t.innerHTML='<svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>'+msg;box.appendChild(t);
+    requestAnimationFrame(function(){t.classList.add('show');});setTimeout(function(){t.classList.remove('show');setTimeout(function(){if(t.parentNode)t.parentNode.removeChild(t);},400);},2300);}
+
+  function openFilters(){$('#filters').classList.add('open');$('#overlay').classList.add('show');document.body.classList.add('no-scroll');}
+  function closeFilters(){if(window.innerWidth<=980){$('#filters').classList.remove('open');if(!modalOpen()&&!$('#cartDrawer').classList.contains('open'))$('#overlay').classList.remove('show');document.body.classList.remove('no-scroll');}}
+
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('[data-add],[data-buy],[data-quick],[data-dept],[data-mat],[data-price],[data-avail],[data-inc],[data-dec],[data-remove]');
+    if(!t)return;
+    if(t.hasAttribute('data-add')){add(t.getAttribute('data-add'));toast('Added to cart');t.style.transform='scale(.95)';setTimeout(function(){t.style.transform='';},140);}
+    else if(t.hasAttribute('data-buy')){add(t.getAttribute('data-buy'));openCart();}
+    else if(t.hasAttribute('data-quick')){openQuick(t.getAttribute('data-quick'));}
+    else if(t.hasAttribute('data-dept')){if(t.tagName==='A'&&t.getAttribute('href'))return;e.preventDefault();setCat(t.getAttribute('data-dept'));window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});}
+    else if(t.hasAttribute('data-mat')){var k=t.getAttribute('data-mat');state.mat=state.mat===k?'':k;renderFilters();renderGrid();}
+    else if(t.hasAttribute('data-price')){var pk=t.getAttribute('data-price');state.price=state.price===pk?'':pk;renderFilters();renderGrid();}
+    else if(t.hasAttribute('data-avail')){state.avail=t.getAttribute('data-avail');renderFilters();renderGrid();}
+    else if(t.hasAttribute('data-inc')){var li=lineFor(t.getAttribute('data-inc'));if(li)setQty(li.id,li.qty+1);}
+    else if(t.hasAttribute('data-dec')){var ld=lineFor(t.getAttribute('data-dec'));if(ld)setQty(ld.id,ld.qty-1);}
+    else if(t.hasAttribute('data-remove')){remove(t.getAttribute('data-remove'));}
+  });
+  $('#searchForm').addEventListener('submit',function(e){e.preventDefault();state.q=$('#searchInput').value;state.cat=$('#searchCat').value;renderFilters();renderGrid();window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});});
+  var deb;$('#searchInput').addEventListener('input',function(e){clearTimeout(deb);var v=e.target.value;deb=setTimeout(function(){state.q=v;renderGrid();},160);});
+  $('#sortSelect').addEventListener('change',function(e){state.sort=e.target.value;renderGrid();});
+  $('#clearAll').addEventListener('click',clearAll);
+  $('#cartToggle').addEventListener('click',openCart);
+  $('#cartClose').addEventListener('click',closeCart);
+  $('#continueShop').addEventListener('click',closeCart);
+  $('#overlay').addEventListener('click',function(){closeCart();closeFilters();closeQuick();});
+  $('#modalClose').addEventListener('click',closeQuick);
+  $('#modalBd').addEventListener('click',closeQuick);
+  $('#ftoggle').addEventListener('click',openFilters);
+  $('#deptAll').addEventListener('click',function(){if(window.innerWidth<=980)openFilters();else{setCat('All');window.scrollTo({top:0,behavior:'smooth'});}});
+  $('#backtop').addEventListener('click',function(){window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeQuick();closeCart();closeFilters();}});
+
+  function deepLinks(){try{var p=new URLSearchParams(location.search);
+    var c=p.get('cat');if(c){var m=['All'].concat(CATS).filter(function(x){return x.toLowerCase()===c.toLowerCase();})[0];if(m)state.cat=m;}
+    var q=p.get('q');if(q){state.q=q;$('#searchInput').value=q;}
+    if(p.get('cart')==='1'||location.hash==='#cart')setTimeout(openCart,250);}catch(e){}}
+
+  renderSearchCat();deepLinks();
+  if($('#searchCat'))$('#searchCat').value=(state.cat==='All'?'All':state.cat);
+  renderFilters();renderGrid();renderCart();updateCart();
+})();
+</script>
+</body>
+</html>
