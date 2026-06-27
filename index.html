@@ -67,12 +67,13 @@ input,select{font-family:inherit;font-size:14px;color:inherit}
 .adept__in a:hover{border-color:#fff}
 .adept__in a.all{font-weight:700}
 .adept__in a.all svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2}
+.adept .dicon{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .adept .hot{color:var(--amber);font-weight:700}
 
 /* hero w/ video */
 .hero{position:relative;height:80vh;min-height:460px;overflow:hidden;background:#11140d}
 @supports(height:80dvh){.hero{height:80dvh}}
-.hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;background:#11140d}
+.hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 50%;background:#11140d}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,13,10,.72),rgba(12,13,10,.3) 46%,rgba(12,13,10,.05) 66%),linear-gradient(to bottom,rgba(12,13,10,.18),transparent 34%,rgba(235,232,225,.92))}
 .hero__in{position:absolute;inset:0;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 28px;display:flex;flex-direction:column;justify-content:center}
 .hero__eyebrow{color:var(--amber);font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;margin-bottom:14px}
@@ -90,7 +91,7 @@ input,select{font-family:inherit;font-size:14px;color:inherit}
 
 /* shell + sections */
 .shell{max-width:var(--maxw);margin:0 auto;padding:0 14px 30px}
-.catcards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.catcards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:18px}
 .ccard{background:var(--surface);border-radius:10px;padding:18px 18px 16px;box-shadow:var(--shadow);display:flex;flex-direction:column}
 .ccard h3{font-size:1.05rem;font-weight:700;margin-bottom:12px}
 .ccard__img{aspect-ratio:1/1;border-radius:8px;overflow:hidden;background:#f2f0e9;margin-bottom:12px}
@@ -102,7 +103,20 @@ input,select{font-family:inherit;font-size:14px;color:inherit}
 .row__head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:14px}
 .row__head h2{font-size:1.35rem;font-weight:700;letter-spacing:-.01em}
 .row__head a{font-size:.85rem;font-weight:600;color:var(--link)}.row__head a:hover{color:var(--link-hover);text-decoration:underline}
-.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+
+/* shop the look (lifestyle band) */
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.room{position:relative;border-radius:10px;overflow:hidden;min-height:320px;box-shadow:var(--shadow);display:flex;align-items:flex-end}
+.room img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.room:hover img{transform:scale(1.05)}
+.room::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(12,13,10,.72),rgba(12,13,10,.08) 58%)}
+.room__txt{position:relative;z-index:2;padding:22px}
+.room__txt small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:5px}
+.room__txt h3{font-size:1.35rem;font-weight:700;color:#fff;letter-spacing:-.01em}
+.room__txt span{font-size:.85rem;font-weight:600;color:#eef0e6}
+.room:hover .room__txt span{text-decoration:underline}
+@media(max-width:760px){.rooms{grid-template-columns:1fr}}
 
 /* product card (no stars) */
 .pcard{display:flex;flex-direction:column;border:1px solid var(--line-2);border-radius:8px;padding:12px;transition:box-shadow .25s,border-color .25s}
@@ -121,7 +135,7 @@ input,select{font-family:inherit;font-size:14px;color:inherit}
 .price__now sup{font-size:.66rem;font-weight:600;top:-.5em;margin-right:1px}
 .price__list{font-size:.74rem;color:var(--muted);width:100%;margin-top:2px}
 .deliv{font-size:.76rem;margin-top:7px}.deliv b{font-weight:700}
-.pcard__btns{margin-top:11px;display:flex;flex-direction:column;gap:7px}
+.pcard__btns{margin-top:auto;padding-top:11px;display:flex;flex-direction:column;gap:7px}
 .pcard__add,.pcard__wa{height:36px;border-radius:18px;font-weight:700;font-size:.82rem;display:flex;align-items:center;justify-content:center;gap:7px;transition:background .2s,transform .1s}
 .pcard__add{background:var(--amber);color:var(--ink);border:1px solid var(--amber-d)}
 .pcard__add:hover{background:var(--amber-d)}.pcard__add:active{transform:scale(.97)}
@@ -213,22 +227,22 @@ input,select{font-family:inherit;font-size:14px;color:inherit}
   <nav class="adept" aria-label="Departments">
     <div class="adept__in">
       <a href="shop.html" class="all"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>All</a>
+      <a href="index.html" class="dhome"><svg class="dicon" viewBox="0 0 24 24"><path d="M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6"/></svg>Home</a>
       <a href="shop.html" class="hot">Today’s Deals</a>
-      <a href="shop.html?cat=Wardrobes">Wardrobes</a>
       <a href="shop.html?cat=Beds">Beds</a>
+      <a href="shop.html?cat=Wardrobes">Wardrobes</a>
       <a href="shop.html?cat=Kitchen">Kitchen</a>
-      <a href="shop.html?cat=Storage">Storage &amp; Dressers</a>
+      <a href="shop.html?cat=Dressers">Dressers</a>
+      <a href="shop.html?cat=Sideboards">Sideboards</a>
       <a href="#materials">Our materials</a>
       <a href="#visit">Visit &amp; contact</a>
     </div>
   </nav>
 </header>
 
-<!-- HERO (full-bleed video background) -->
+<!-- HERO (full-bleed image background) -->
 <section class="hero">
-  <video class="hero__video" autoplay muted loop playsinline poster="v3/poster.jpg" aria-hidden="true">
-    <source src="v3/video.mp4" type="video/mp4">
-  </video>
+  <img class="hero__video" src="assets/hero.jpg" alt="G&amp;M Investment storage cabinet range" />
   <div class="hero__in">
     <span class="hero__eyebrow">Welcome to G&amp;M Investment</span>
     <h1>Furniture built to <em>last.</em></h1>
@@ -244,16 +258,23 @@ input,select{font-family:inherit;font-size:14px;color:inherit}
   <!-- categories (no overlap) -->
   <div class="catcards" id="catCards"></div>
 
-  <!-- deals -->
-  <section class="row" id="deals">
-    <div class="row__head"><h2>Today’s Deals</h2><a href="shop.html">See all deals ›</a></div>
-    <div class="pgrid" id="dealsGrid"></div>
+  <!-- new arrivals -->
+  <section class="row" id="new">
+    <div class="row__head"><h2>New arrivals</h2><a href="shop.html">Shop all ›</a></div>
+    <div class="pgrid" id="newGrid"></div>
   </section>
 
-  <!-- bestsellers -->
-  <section class="row">
-    <div class="row__head"><h2>More from our workshop</h2><a href="shop.html">Shop all ›</a></div>
-    <div class="pgrid" id="featGrid"></div>
+  <!-- shop the look -->
+  <section class="rooms" aria-label="Shop by room">
+    <a class="room" href="shop.html?cat=Beds"><img src="assets/life-bed.jpg" alt="Upholstered bed in a styled bedroom" loading="lazy"><div class="room__txt"><small>New in</small><h3>Beds &amp; bedrooms</h3><span>Upholstered queen beds ›</span></div></a>
+    <a class="room" href="shop.html?cat=Kitchen"><img src="assets/life-kitchen.jpg" alt="Fitted white kitchen cupboards" loading="lazy"><div class="room__txt"><small>Made to fit</small><h3>Kitchen cupboards</h3><span>Counters, pantries &amp; bars ›</span></div></a>
+    <a class="room" href="shop.html?cat=Wardrobes"><img src="assets/life-vanity.jpg" alt="Black wardrobe and vanity set" loading="lazy"><div class="room__txt"><small>Storage</small><h3>Wardrobes &amp; vanities</h3><span>Mirror, glass &amp; combo units ›</span></div></a>
+  </section>
+
+  <!-- deals -->
+  <section class="row" id="deals">
+    <div class="row__head"><h2>Featured pieces</h2><a href="shop.html">Shop all ›</a></div>
+    <div class="pgrid" id="dealsGrid"></div>
   </section>
 
   <!-- materials -->
@@ -298,7 +319,7 @@ input,select{font-family:inherit;font-size:14px;color:inherit}
 <div class="backtop" id="backtop">Back to top</div>
 <footer class="footer">
   <div class="footer__cols">
-    <div><h4>Shop</h4><a href="shop.html?cat=Wardrobes">Wardrobes</a><a href="shop.html?cat=Beds">Beds</a><a href="shop.html?cat=Kitchen">Kitchen cabinets</a><a href="shop.html?cat=Storage">Storage &amp; dressers</a><a href="shop.html">All products</a></div>
+    <div><h4>Shop</h4><a href="shop.html?cat=Beds">Beds</a><a href="shop.html?cat=Wardrobes">Wardrobes</a><a href="shop.html?cat=Kitchen">Kitchen</a><a href="shop.html?cat=Dressers">Dressers</a><a href="shop.html?cat=Sideboards">Sideboards</a><a href="shop.html">All products</a></div>
     <div><h4>Learn</h4><a href="#materials">Our materials</a><a href="#deals">Today’s deals</a><a href="#visit">Visit the showroom</a></div>
     <div><h4>Help</h4><a href="tel:+5926840094">Call 684-0094</a><a href="https://wa.me/5926840094" target="_blank" rel="noopener">WhatsApp us</a><a href="#visit">Visit &amp; pickup</a></div>
     <div><h4>Visit</h4><p>187 Parafield, Leonora<br>West Coast Demerara</p><a href="tel:+5926840094">684-0094</a><p>By appointment · Mon–Sat</p></div>
@@ -326,24 +347,29 @@ input,select{font-family:inherit;font-size:14px;color:inherit}
   function waProduct(p){return WA+'?text='+encodeURIComponent('Hi G&M Investment, I\'m interested in this piece:\n\n'+p.name+'\n'+p.mat+'\nPrice: G$ '+money(p.price));}
 
   var CATS=[
-    {name:'Wardrobes',img:'assets/wardrobe.jpg'},
-    {name:'Beds',img:'assets/bed.jpg'},
-    {name:'Kitchen',img:'assets/kitchen.jpg'},
-    {name:'Storage',label:'Storage & Dressers',img:'assets/sideboard.jpg'}
+    {name:'Beds',img:'assets/bed-royal.jpg'},
+    {name:'Wardrobes',img:'assets/wd-black.jpg'},
+    {name:'Kitchen',img:'assets/kit-white.jpg'},
+    {name:'Dressers',img:'assets/dr-mahogany.jpg'},
+    {name:'Sideboards',img:'assets/sb-grey.jpg'}
   ];
   /* ids/prices/images mirror shop.html */
   var P={
-    solace:{id:'solace',name:'Solace 3-Door Wardrobe — ebonised finish',price:165000,list:198000,img:'assets/wardrobe.jpg',cat:'Wardrobes',mat:'MDF · Plywood · Hard Wood'},
-    lunaria:{id:'lunaria',name:'Lunaria Mirrored Wardrobe — soft-grey',price:235000,list:275000,img:'assets/armoire.jpg',cat:'Wardrobes',mat:'Plywood · MDF · mirror'},
-    verena:{id:'verena',name:'Verena Upholstered Bed (Queen)',price:245000,list:295000,img:'assets/bed.jpg',cat:'Beds',mat:'Leather & suede · hardwood frame'},
-    halcyon:{id:'halcyon',name:'Halcyon Kitchen Cabinets — built to order',price:360000,img:'assets/kitchen.jpg',cat:'Kitchen',mat:'MDF · Plywood',made:true},
-    cordova:{id:'cordova',name:'Cordova Kitchen Range — built to order',price:410000,img:'assets/kitchen2.jpg',cat:'Kitchen',mat:'MDF · Plywood',made:true},
-    aurora:{id:'aurora',name:'Aurora Storage Cabinet Set — black & white',price:145000,list:175000,img:'assets/cabinets.jpg',cat:'Storage',mat:'MDF · Plywood'},
-    meridian:{id:'meridian',name:'Meridian Nightstand — walnut, 2 drawers',price:58000,list:72000,img:'assets/sideboard.jpg',cat:'Storage',mat:'Hard Wood · Plywood'},
-    aldon:{id:'aldon',name:'Aldon Bedside Table — walnut',price:52000,img:'assets/nightstand2.jpg',cat:'Storage',mat:'Hard Wood · Plywood'}
+    bedPurple:{id:'bed-purple',name:'Upholstered Bed (Queen) — Purple',price:62000,img:'assets/bed-purple.jpg',cat:'Beds',mat:'Leather & suede · hardwood frame'},
+    wdBlack:{id:'wd-black',name:'3-Door Wardrobe — Black',price:79000,list:89000,img:'assets/wd-black.jpg',cat:'Wardrobes',mat:'MDF · Plywood · Hard Wood'},
+    wdGrey:{id:'wd-grey',name:'Double Door Combination Wardrobe — Grey',price:89000,list:95000,img:'assets/wd-grey.jpg',cat:'Wardrobes',mat:'MDF · Plywood · mirror'},
+    wdWhite:{id:'wd-white',name:'3-Door Mirror Wardrobe — White',price:92000,list:99000,img:'assets/wd-white.jpg',cat:'Wardrobes',mat:'MDF · Plywood · mirror'},
+    kitWhite:{id:'kit-white',name:'Kitchen Cupboard — White',price:105000,img:'assets/kit-white.jpg',cat:'Kitchen',mat:'MDF · Plywood'},
+    drMah:{id:'dr-mahogany',name:'Dresser with Mirror — Mahogany',price:55000,img:'assets/dr-mahogany.jpg',cat:'Dressers',mat:'Hard Wood · Plywood · mirror'},
+    bedTeal:{id:'bed-teal',name:'Upholstered Bed (Queen) — Teal',price:62000,img:'assets/bed-teal.jpg',cat:'Beds',mat:'Leather & suede · hardwood frame'},
+    bedRoyal:{id:'bed-royal',name:'Upholstered Bed (Queen) — Royal Blue',price:60000,img:'assets/bed-royal.jpg',cat:'Beds',mat:'Leather & suede · hardwood frame'},
+    wdVanity:{id:'wd-vanity',name:'Wardrobe & Vanity Set — Black',price:98000,img:'assets/wd-vanity.jpg',cat:'Wardrobes',mat:'MDF · Plywood · mirror'},
+    kitBar:{id:'kit-bar',name:'Kitchen with Breakfast Bar — White',price:125000,img:'assets/kit-bar.jpg',cat:'Kitchen',mat:'MDF · Plywood'},
+    wdGreyMirror:{id:'wd-grey-mirror',name:'Mirrored Wardrobe — Grey (4-door)',price:90000,img:'assets/wd-grey-mirror.jpg',cat:'Wardrobes',mat:'MDF · Plywood · mirror'},
+    drBlack:{id:'dr-black',name:'Dresser with Mirror — Black',price:52000,img:'assets/dr-black.jpg',cat:'Dressers',mat:'MDF · Plywood · mirror'}
   };
-  var DEALS=[P.verena,P.solace,P.lunaria,P.aurora];
-  var FEAT=[P.halcyon,P.cordova,P.meridian,P.aldon];
+  var DEALS=[P.bedPurple,P.wdBlack,P.wdGrey,P.wdWhite,P.kitWhite,P.drMah];
+  var NEWARR=[P.bedTeal,P.bedRoyal,P.wdVanity,P.kitBar,P.wdGreyMirror,P.drBlack];
 
   function tag(p){ if(pct(p)>=15)return '<span class="tag tag--deal">Deal · -'+pct(p)+'%</span>'; if(p.made)return '<span class="tag tag--made">Built to order</span>'; return ''; }
   function card(p){
@@ -363,7 +389,7 @@ input,select{font-family:inherit;font-size:14px;color:inherit}
     return '<a class="ccard" href="shop.html?cat='+encodeURIComponent(c.name)+'"><h3>'+lbl+'</h3>'+
       '<div class="ccard__img"><img src="'+c.img+'" alt="" loading="lazy"></div>'+
       '<span class="ccard__link">Shop '+lbl+' ›</span></a>';}).join(''); }
-  function renderSearchCat(){ $('#searchCat').innerHTML='<option value="All">All</option>'+['Wardrobes','Beds','Kitchen','Storage'].map(function(c){return '<option value="'+c+'">'+c+'</option>';}).join(''); }
+  function renderSearchCat(){ $('#searchCat').innerHTML='<option value="All">All</option>'+['Beds','Wardrobes','Kitchen','Dressers','Sideboards'].map(function(c){return '<option value="'+c+'">'+c+'</option>';}).join(''); }
 
   function loadCart(){try{return JSON.parse(localStorage.getItem('gm_cart')||'[]');}catch(e){return[];}}
   function saveCart(c){try{localStorage.setItem('gm_cart',JSON.stringify(c));}catch(e){}}
@@ -384,8 +410,8 @@ input,select{font-family:inherit;font-size:14px;color:inherit}
   $all('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=$(id);if(t){e.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth'});}});});
 
   renderSearchCat();renderCats();
+  $('#newGrid').innerHTML=NEWARR.map(card).join('');
   $('#dealsGrid').innerHTML=DEALS.map(card).join('');
-  $('#featGrid').innerHTML=FEAT.map(card).join('');
   updateBadges();
 })();
 </script>
